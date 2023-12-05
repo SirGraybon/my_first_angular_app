@@ -1,0 +1,24 @@
+<p>timer works!</p>
+
+
+
+<ul >
+  <div *ngFor="let task of tasks">
+  <div class="agenda_item">
+    <div>{{task.task}}</div>
+    <div>{{task.totalTaskTime}} minutes</div>
+  </div>
+</div>
+</ul>
+
+
+
+
+<button *ngIf="timerActive === false; else active" (click)="startTimer()"> start</button>
+
+<ng-template #active>
+  <input type="text" #activity (keyup)="setActivity(activity.value)" />
+<button (click)="stopTimer()"> Submit</button>
+
+
+</ng-template>
