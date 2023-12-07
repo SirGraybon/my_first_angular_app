@@ -27,10 +27,11 @@ export class TimerComponent {
   stopTimer() {
     this.endTime = new Date().getTime()
     this.timerActive = false
-    const seconds = ((this.endTime - this.startTime) / 1000).toString().substr(11, 8)  
-    // const formatedTime = seconds => new Date(s * 1000).toISOString().substr(11, 8);
-    this.tasks.push({task: this.activity, start : this.startTime, end: this.endTime, totalTaskTime: this.totalTime, notes: "N/A" })
+    const seconds  = (this.endTime - this.startTime) / 1000 
 
+    this.tasks.push({task: this.activity, start : this.startTime, end: this.endTime, totalTaskTime: seconds, notes: "N/A" })
+
+    console.log(seconds)
     console.log(this.totalTime)
 
   }
