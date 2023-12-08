@@ -1,10 +1,72 @@
-.agenda_item {
+.agenda {
   display: flex;
-  justify-content: space-between;
-  width: 300px;
-  height: 50px;
-  margin: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
-  border-radius: 15px;
-  background-color: aquamarine;
+  border-radius: 20px;
 }
+
+.agenda_item {
+  transition: 0.8s;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  width: 600px;
+  height: auto;
+  /* padding: 30px; */
+  border-radius: 20px;
+  background-color: #D7BBA8;
+  box-shadow: 2px 2px 5px rgba(135, 135, 135, 0.48);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.agenda_item_head {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.agenda_item_focused {
+  transition: 0.8s;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  height: auto;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #D7BBA8;
+  box-shadow: 2px 2px 5px rgba(135, 135, 135, 0.48);
+}
+
+.timer_button {
+  border-radius: 8px;
+  border: none;
+  width: 100px;
+  height: 50px;
+  background-color: #2D93AD;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(135, 135, 135, 0.48);
+}
+
+.timer_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer_input {
+  border: none;
+  box-shadow: 3px 3px 3px rgba(135, 135, 135, 0.48);
+  width: 300px;
+  height: 45px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 0 10px 0 10px;
+}
+
+
+

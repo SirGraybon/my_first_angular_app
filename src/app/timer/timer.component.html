@@ -1,24 +1,51 @@
 <p>timer works!</p>
+<section class="agenda">
 
 
 
-<ul >
+
+
   <div *ngFor="let task of tasks">
-  <div class="agenda_item">
-    <div>{{task.task}}</div>
-    <div>{{task.totalTaskTime}} minutes</div>
+
+
+ 
+
+
+    <mat-expansion-panel class="agenda_item" hideToggle>
+      <mat-expansion-panel-header class="agenda_item_head" >
+
+
+          <h4 >
+            {{task.task}}
+          </h4>
+          <h6>
+            {{task.totalTaskTime}}
+          </h6>
+
+
+      </mat-expansion-panel-header>
+      <ul  >
+        <li *ngFor="let note of task.notes; index as i">{{task.notes[i]}}</li>
+      </ul>
+    </mat-expansion-panel>
   </div>
-</div>
-</ul>
+
+
+
+</section>
 
 
 
 
-<button *ngIf="timerActive === false; else active" (click)="startTimer()"> start</button>
+<article class="timer_form">
+  <button class="timer_button" *ngIf="timerActive === false; else active" (click)="startTimer()"> start</button>
 
-<ng-template #active>
-  <input type="text" #activity (keyup)="setActivity(activity.value)" />
-<button (click)="stopTimer()"> Submit</button>
+  <ng-template #active>
+
+    <input class="timer_input" type="text" #activity (keyup)="setActivity(activity.value)" />
+    <input class="timer_input" type="text" #activity (keyup)="setNotes(activity.value)" />
+    <button class="timer_button" (click)="stopTimer()"> Submit</button>
 
 
-</ng-template>
+  </ng-template>
+</article>

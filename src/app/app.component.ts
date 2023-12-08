@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { ToDoItem } from './shared/models/ToDoItem';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 import { TimerComponent } from './timer/timer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,CurrencyConverterComponent, TimerComponent],
+  imports: [CommonModule, RouterOutlet,CurrencyConverterComponent, TimerComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
